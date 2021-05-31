@@ -5,11 +5,14 @@
   align-items: baseline;
   justify-content: center;
   width: 100vw;
-  height: 100vh;
   
 }
 /***********/
 .App-header {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-around;
   width: 100vw;
   background-color: #282c34;
   height: 15vh;
@@ -22,7 +25,11 @@
   width: 100vw;
   color: white;
 }
-
+/*********************************/
+.App-content-separator {
+  display: flexbox;
+  height: 20px;
+}
 /***********/
 .App-content {
   display: flex;
@@ -30,34 +37,47 @@
   align-items: baseline;
   justify-content: center;
   width: 100vw;
-  height: 85vh;
-  background-color: dodgerblue;
+  height: auto;
+  /* background-color: dodgerblue; */
  }
 /***********/
-.App-content-top {
- background-color: darkgreen;
-}
 
-.App-content-center {
+/***********************************/
+.App-content-top{
   display: flex;
   flex-direction: row;
-  align-items: baseline;
+  flex-wrap: wrap;
   justify-content: space-around;
+ 
+
+}
+.App-content-top > article{
+  background-color: rgb(76, 238, 12);
+  overflow-wrap: break-word;
+   width: 25%;
+
 }
 
-.App-content-center div{
-  border: 2px solid #444;
-  border-radius: 20px;
-  background-color: rgb(247, 239, 240);
-  width: 15vw;
-  height: 15vh;
-  
-}
+/**********************************/
 
+.App-content-centr{
+  background-color: rgb(108, 18, 224);
+
+}
+/**********************************/
 
 .App-content-bottom{
   background-color: rgb(241, 24, 24);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
 
+}
+.App-content-bottom > article{
+
+  overflow-wrap: break-word;
+   width: 25%;
 }
 
 
@@ -74,3 +94,22 @@
   height: 100%;
 }
 
+/********************************/
+.App-content-cards {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 5px;
+}
+
+.App-content-cards div{
+  border: 3px solid #444;
+  border-radius: 20px;
+  background-color: rgb(247, 239, 240);
+  margin-left: 10px;
+  width: 15vw;
+  height: 15vh;
+  
+}
+/*****************************************/
